@@ -1,0 +1,41 @@
+
+.addOrder form{
+ display: flex;
+ flex-direction: column;
+ max-width: 500px;
+ margin:40px auto;
+}
+.addOrder input{
+    margin:10px;
+     outline: none;
+     border: none;
+     border-bottom: 1px solid green;
+}
+.addOrder input:focus {
+    border: 1px solid green ;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.addOrder input::placeholder {
+    color:green;
+    font-weight: 600;
+    padding: 10px;
+ 
+}
+.addOrder input[type=submit]{
+    border: 1px solid rgb(48, 114, 3);
+    color: rgb(250, 250, 250);
+    font-weight: 700;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+}
+.addOrder input[type=submit]:hover{
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    border-radius: 20px;
+    background-color:green;
+    outline: none;
+    border:none;
+    padding:5px 0;
+}

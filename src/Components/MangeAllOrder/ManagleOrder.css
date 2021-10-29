@@ -1,0 +1,12 @@
+
+.pending{
+    background-color: orange;
+    border: none;
+    border-radius:4px;
+}
+
+.approved{
+    background-color: green;
+    border:none;
+    border-radius:4px;
+}
