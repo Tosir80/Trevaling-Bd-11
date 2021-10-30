@@ -17,6 +17,7 @@ const AddOffer = () => {
    return (
      <>
        <title>AddOffer Page..</title>
+       <h2 className="py-5">Add your Favorite Place </h2>
        <div class='addoffer'>
          <form onSubmit={handleSubmit(onSubmit)}>
            <input
