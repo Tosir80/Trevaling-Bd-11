@@ -7,7 +7,7 @@ const ExtraSection = () => {
       <div>
         <Container>
           <h3 className='py-3'>About TravelBD</h3>
-          <Row className='py-5' sm={1} md={2}>
+          <Row className='py-5' xs={1} sm={1} md={2}>
             <Col>
               <img className='img-fluid' src='img/extra/1.jpg' alt='' />
             </Col>
