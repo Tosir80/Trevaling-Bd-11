@@ -6,7 +6,7 @@ import "./AddOffer.css"
 const AddOffer = () => {
      const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data =>{
-      axios.post(`http://localhost:5000/addoffer`,data)
+      axios.post(`https://secure-everglades-00863.herokuapp.com/addoffer`,data)
       .then(res=>{
           if(res.data.acknowledged){
               toast("Offer added Successfully")
@@ -16,12 +16,26 @@ const AddOffer = () => {
 
    return (
      <>
-       <div class="addoffer">
+       <title>AddOffer Page..</title>
+       <div class='addoffer'>
          <form onSubmit={handleSubmit(onSubmit)}>
-           <input placeholder='Country Name' {...register('country',{ required: true })} />
-           <input placeholder='Place Name' {...register('place',{ required: true })} />
-           <input type='number' placeholder='Price' {...register('price',{ required: true })} />
-           <input placeholder='Img Url' {...register('img' ,{ required: true })} />
+           <input
+             placeholder='Country Name'
+             {...register('country', { required: true })}
+           />
+           <input
+             placeholder='Place Name'
+             {...register('place', { required: true })}
+           />
+           <input
+             type='number'
+             placeholder='Price'
+             {...register('price', { required: true })}
+           />
+           <input
+             placeholder='Img Url'
+             {...register('img', { required: true })}
+           />
            <input type='submit' />
          </form>
        </div>

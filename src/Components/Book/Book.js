@@ -12,7 +12,7 @@ const Book = () => {
      const [singleOffer,setSingleOffer]=useState({})
      const {img,country,place,price} =singleOffer
     useEffect(()=>{
-        axios.get(`http://localhost:5000/booking/${offersid}`)
+        axios.get(`https://secure-everglades-00863.herokuapp.com/booking/${offersid}`)
         .then(res=>setSingleOffer(res.data))
     },[])
 
@@ -22,7 +22,7 @@ const Book = () => {
     const status="Pending"
       const newData ={ ...data , ...singleOffer  ,status}
       
-      axios.post('http://localhost:5000/addedOffer',newData)
+      axios.post('https://secure-everglades-00863.herokuapp.com/addedOffer',newData)
       .then(res=>{
           console.log(res)
           if(res.data.acknowledged){

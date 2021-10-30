@@ -14,7 +14,7 @@ const Header = () => {
         <>  
           <Navbar bg='primary' variant='dark'  sticky='top' collapseOnSelect expand='md'>
             <Container>
-              <Navbar.Brand  as={Link} to="/home">TourBD</Navbar.Brand>
+              <Navbar.Brand  as={Link} to="/home">TravelBd</Navbar.Brand>
                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                <Navbar.Collapse id="basic-navbar-nav">
               <Nav className='ms-auto'>
@@ -25,7 +25,7 @@ const Header = () => {
                  <Nav.Link as={Link} to="/addoffer">AddOffer</Nav.Link>
                  </div> }
                   <div className="d-md-flex">
-                    {user?.email? <button className="btn btn-warning" onClick={logOutHandler}>logOut</button> : <Nav.Link as={Link} to="/login">Login</Nav.Link> }
+                    {user?.email? <button className="btn btn-warning" onClick={logOutHandler}>LogOut</button> : <Nav.Link as={Link} to="/login">Login</Nav.Link> }
                 <div className="w-25 p-1 mx-auto"><img src={user?.photoURL} className="img-fluid rounded-circle" alt="" /></div>
                   </div>
               </Nav>

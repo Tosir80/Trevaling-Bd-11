@@ -24,6 +24,7 @@ const Login = () => {
 
   return (
     <div>
+      <title>Login page...</title>
       <button className='my-5 bg-warning btn ' onClick={handleGoogleBtn}>
         Login With Google
       </button>
