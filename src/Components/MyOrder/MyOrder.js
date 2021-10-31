@@ -37,7 +37,7 @@ const MyOrder = () => {
           {addOffer.map(pd=><div >
             <div className="bg-info shadow py-1 d-md-flex align-items-center justify-content-around m-4 rounded">
               <img src={pd.img} className=" rounded-circle" height="100px" width="100px"  alt="" />
-               <div className="text-start">
+               <div className="text-md-start pt-2 pt-md-0">
                  <h6>{pd.place}</h6>
                  <p className="text-light">OrderId:{pd._id}</p>
                </div>
