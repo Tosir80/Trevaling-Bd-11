@@ -38,7 +38,7 @@ const Book = () => {
           <h2 className='py-5'>See details and Place Our Order </h2>
           <Col>
             <h6>Offers Details about Place </h6>
-            <div className='p-2 border mb-4'>
+            <div className='ms-2 p-2 shadow mb-4'>
               <img src={img} className='img-fluid' alt='' />
               <h6>Country : {country}</h6>
               <h4>Place : {place}</h4>
@@ -48,7 +48,7 @@ const Book = () => {
 
           <Col>
             <h4>Please give some details</h4>
-            <div class="addOrder">
+            <div className="addOrder border border-info rounded m-3 shadow">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input defaultValue={user.displayName} {...register('username')} />
                 <input defaultValue={user.email} readOnly  {...register('email')} />

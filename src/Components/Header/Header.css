@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.navbar{
+    background:#0B234A ;
+    border-bottom:2px solid #f0571a;
+}
+
+.brand{
+    color:#f0571a;
+    font-size:30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a{
+    text-decoration:none;
+    margin:10px 10px;
+    display:block ;
+    color:white;
+    font-size:18px;
+    font-weight:600;   
+}
+
+.navbar .selected{
+    color:#f0571a;
+}

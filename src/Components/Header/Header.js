@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink ,Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useAuth from '../Hooks/useAuth';
-
+import './Header.css'
 const Header = () => {
   const{user,logOut}=useAuth()
     const logOutHandler=()=>{
@@ -12,17 +12,17 @@ const Header = () => {
     }
     return (
         <>  
-          <Navbar bg='primary' variant='dark'  sticky='top' collapseOnSelect expand='md'>
+          <Navbar className="navbar" variant='dark'  sticky='top' collapseOnSelect expand='md'>
             <Container>
-              <Navbar.Brand  as={Link} to="/home">TravelBd</Navbar.Brand>
+              <Navbar.Brand   as={Link} to="/home"><span className="brand">TravelBd</span></Navbar.Brand>
                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className='ms-auto'>
-                <Nav.Link as={Link} to="/home">Home</Nav.Link>
+              <Nav className='ms-auto navlink d-md-flex d-block flex-colums align-items-center'>
+                <NavLink activeClassName="selected"  to="/home">Home</NavLink>
                  {user?.email && <div className="d-md-flex">
-                   <Nav.Link as={Link} to="/myorder">MyOrder</Nav.Link>
-                 <Nav.Link as={Link} to="/manageallorder">ManageAllOrder</Nav.Link>
-                 <Nav.Link as={Link} to="/addoffer">AddOffer</Nav.Link>
+                   <NavLink activeClassName="selected"  to="/myorder">MyOrder</NavLink>
+                 <NavLink activeClassName="selected"  to="/manageallorder">ManageAllOrder</NavLink>
+                 <NavLink activeClassName="selected" to="/addoffer">AddOffer</NavLink>
                  </div> }
                   <div className="d-md-flex">
                     {user?.email? <button className="btn btn-warning" onClick={logOutHandler}>LogOut</button> : <Nav.Link as={Link} to="/login">Login</Nav.Link> }

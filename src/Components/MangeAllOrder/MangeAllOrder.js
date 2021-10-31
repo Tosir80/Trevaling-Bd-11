@@ -43,6 +43,7 @@ const handleApproved=(id)=>{
                   <h6>Country:{order.country} </h6>
                   <h3 className='text-primary'>Who Orders:</h3>
                   <p>{order.email}</p>
+                  <p>Address: {order.address}</p>
                   <p>No:{order.number}</p>
                   <div className='d-flex justify-content-around'>
                     <button
