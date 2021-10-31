@@ -10,7 +10,7 @@ const Book = () => {
     const {offersid}=useParams()
     const {user} =useAuth()
      const [singleOffer,setSingleOffer]=useState({})
-     const {img,country,place,price} =singleOffer
+     const {_id ,img,country,place,price} =singleOffer
 
     useEffect(()=>{
         axios.get(`https://secure-everglades-00863.herokuapp.com/booking/${offersid}`)
@@ -21,7 +21,8 @@ const Book = () => {
   const { register, handleSubmit, watch,reset, formState: { errors } } = useForm();
   const onSubmit = data =>{
     const status="Pending"
-      const newData ={ ...data , ...singleOffer  ,status}
+     
+      const newData ={ ...data,id:_id,img,country,place,price ,status}
       
       axios.post('https://secure-everglades-00863.herokuapp.com/addedOffer',newData)
       .then(res=>{
