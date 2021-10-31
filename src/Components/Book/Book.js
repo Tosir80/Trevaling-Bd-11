@@ -11,6 +11,7 @@ const Book = () => {
     const {user} =useAuth()
      const [singleOffer,setSingleOffer]=useState({})
      const {img,country,place,price} =singleOffer
+
     useEffect(()=>{
         axios.get(`https://secure-everglades-00863.herokuapp.com/booking/${offersid}`)
         .then(res=>setSingleOffer(res.data))
@@ -51,9 +52,11 @@ const Book = () => {
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input defaultValue={user.displayName} {...register('username')} />
                 <input defaultValue={user.email} readOnly  {...register('email')} />
-                <input placeholder="Address" {...register('address')} /> 
-                <input type="number" placeholder="Moblie No" {...register('number')} /> 
-              
+                <input placeholder="Address" {...register('address',{ required: true })} /> 
+                {errors.address && <span className="text-danger">Address is required</span>}
+                <input type="number" placeholder="Mobile No" {...register('number',{ required: true })} /> 
+               {errors.number && <span className="text-danger">Mobile no is required</span>}
+                <input  defaultValue={new Date()}  {...register('date')} /> 
                 <input className="btn btn-secondary" type='submit' value="Add order" />
               </form>
             </div>

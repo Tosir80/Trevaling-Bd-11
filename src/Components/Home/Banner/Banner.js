@@ -7,8 +7,8 @@ const Banner = () => {
     <>
       <Carousel fade>
         <Carousel.Item>
-          <img
-            className="w-100"
+          <img 
+            className=" img w-100"
             src='/img/banner/1.jpg'
             alt='First slide'
           />
