@@ -37,9 +37,13 @@ const MyOrder = () => {
           {addOffer.map(pd=><div >
             <div className="bg-info shadow py-1 d-md-flex align-items-center justify-content-around m-4 rounded">
               <img src={pd.img} className=" rounded-circle" height="100px" width="100px"  alt="" />
+               <div>
+                 <h6>{pd.place}</h6>
+                 <p className="text-light">OrderId:{pd._id}</p>
+               </div>
                <h6>{pd.country}</h6>
-               <h6>{pd.place}</h6>
                <h6>{pd.address}</h6>
+               <h6>{pd.number}</h6>
                  {pd?.status === 'Approved' ? (
                     <span className=' bg-primary rounded-3 p-1'>{pd?.status}</span>
                   ) : (

@@ -37,7 +37,7 @@ const handleApproved=(id)=>{
           <Row xs={1} sm={2} md={4}>
             {allOrder.map((order) => (
               <div key={order._id}>
-                <Card className='border p-3 m-1 shadow-lg'>
+                <Card className='border border-warning p-3 m-1 shadow-lg'>
                   <img src={order.img} className='img-fluid' alt='' />
                   <h2>Place: {order.place}</h2>
                   <h6>Country:{order.country} </h6>
